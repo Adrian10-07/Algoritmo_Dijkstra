@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Rutas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main_cabecera">
+        <h1 >Eco Viajes</h1>
+    </header>
+    <main>
+        <section id="add-vertex" class="main_contenedores">
+            <h2>Insertar Ciudad</h2>
+            <form id="vertex-form">
+                <label for="vertex-name">Nombre de la Ciudad:</label>
+                <input type="text" id="vertex-name" name="vertex-name" required>
+                <button type="button" id="btn-addV">Añadir Ciudad</button>
+            </form>
+        </section>
+        <section id="add-edge" class="main_contenedores">
+            <h2>Insertar distancia entre dos Ciudades</h2>
+            <form id="edge-form">
+                <label for="start-vertex">Ciudad Inicial:</label>
+                <input type="text" id="start-vertex" name="start-vertex" required>
+                <label for="end-vertex">Ciudad de destino:</label>
+                <input type="text" id="end-vertex" name="end-vertex" required>
+                <div>
+                <label for="insert-conex">Distancia:</label>
+                <input type="text" id="insert-conex" name="insert-conex" required>
+                <button type="button" id="btn-addC">Añadir distancia</button>   
+                </div>
+
+            </form>
+        </section>
+        <section id="dfs-traversal" class="main_contenedores">
+            <h2>Mostrar ciudades registradas</h2>
+            <form id="dfs-form">
+                <label for="dfs-start">Ciudad Inicial:</label>
+                <input type="text" id="dfs-start" name="dfs-start" required>
+                <button type="button" id="btn-dfs">Mostrar Ciudades</button>
+            </form>
+            <table border="0px">
+                <thead>
+                    <tr>
+                        <th>Ciudades</th>
+                    </tr>
+                </thead>
+                <tbody id="dfs-result"></tbody>
+            </table>
+        </section>
+        <section id="dja-traversal" class="main_contenedores">
+            <h2>Camino más corto</h2>
+            <form id="dja-form">
+                <label for="Vinit">Ciudad Inicial:</label>
+                <input type="text" id="Vinit" name="Vinit" required>
+                <button type="button" id="btn-dja">Buscar</button>
+            </form>
+            <table border="0px">
+                <thead>
+                    <tr>
+                        <th>Distancia más corta</th>
+                    </tr>
+                </thead>
+                <tbody id="dja-result"></tbody>
+            </table>
+        </section>
+        <script type="module" src="./controllers/script.mjs"></script>
+    </main>
+</body>
+</html>
